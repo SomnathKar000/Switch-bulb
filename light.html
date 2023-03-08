@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+    <style>
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .btn{
+            padding: 10px;
+            background-color: cornflowerblue;
+            border-radius: 25%;
+            width: auto;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <img id="bulb" class="center" src="Images/Bulb-off.jpg" alt="">
+    <button id="onButton" class="center btn">Turn on</button>
+    <script>
+        const btn = document.getElementById("onButton")
+        const bulb = document.getElementById("bulb")
+        btn.addEventListener("click", lightBulb);
+        function lightBulb(e){
+           if(btn.textContent.includes("on" )){
+            btn.textContent = "Turn off";
+            bulb.src = "Images/Bulb-on.jpg";
+           }
+        else{
+            btn.textContent = "Turn on";
+            bulb.src = "Images/Bulb-off.jpg";
+        }
+        }
+        
+    </script>
+</body>
+</html>
